@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "Baekjoon Data Collector",
+    "version": "1.0.0",
+    "permissions": ["tabs"],
+    "host_permissions": [
+        "https://www.acmicpc.net/*",
+        "https://solved.ac/*",
+        "http://127.0.0.1/*",
+        "http://localhost:8080/*"
+    ],
+    "background": {
+        "service_worker": "baekjoon/background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.acmicpc.net/submit/*"],
+            "js": ["baekjoon/submitContent.js"],
+            "run_at": "document_start"
+        },
+        {
+            "matches": ["https://www.acmicpc.net/status*"],
+            "js": ["baekjoon/statusContent.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://www.acmicpc.net/problem/*"],
+            "js": ["baekjoon/problemContent.js"],
+            "run_at": "document_end"
+        },
+        {
+            "matches": ["https://www.acmicpc.net/source/*"],
+            "js": ["baekjoon/sourceContent.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
