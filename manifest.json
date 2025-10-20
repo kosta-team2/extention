@@ -14,7 +14,7 @@
         "type": "module"
     },
     "content_scripts": [
-        {
+        { 
             "matches": ["https://www.acmicpc.net/submit/*"],
             "js": ["baekjoon/submitContent.js"],
             "run_at": "document_start"
@@ -26,7 +26,10 @@
         },
         {
             "matches": ["https://www.acmicpc.net/problem/*"],
-            "js": ["baekjoon/problemContent.js"],
+            "js": [
+            "baekjoon/util.js",
+            "baekjoon/problemContent.js"
+            ],
             "run_at": "document_end"
         },
         {
