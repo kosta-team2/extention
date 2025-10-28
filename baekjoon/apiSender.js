@@ -5,7 +5,7 @@
 //  - refresh 실패 시 로그인 탭 오픈 (JSP)
 // ------------------------------------------------------------
 
-export const API_BASE  = "https://localhost:8443";       // 컨텍스트 패스가 있다면 꼭 포함
+export const API_BASE  = "https://ujax.shop";       // 컨텍스트 패스가 있다면 꼭 포함
 export const LOGIN_URL = `${API_BASE}/auth/login.jsp`;   // JSP 로그인 페이지
 
 const REFRESH_ENDPOINT = "/ext/auth/refresh";            // 서버와 약속한 refresh 경로
