@@ -9,7 +9,7 @@
         "http://127.0.0.1/*",
         "http://localhost:8080/*",
         "https://localhost:8443/*",
-        "https://ujax.shop"
+        "https://ujax.shop/*"
     ],
     "background": {
         "service_worker": "baekjoon/background.js",
